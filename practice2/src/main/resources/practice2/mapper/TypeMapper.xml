@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.practice2.mapper.TypeMapper">
+
+    <resultMap id="BaseResultMap" type="org.example.practice2.pojo.Type">
+            <id property="id" column="id" />
+            <result property="name" column="name" />
+            <result property="character1" column="character1" />
+            <result property="character2" column="character2" />
+            <result property="isDeleted" column="is_deleted" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,character1,character2,is_deleted
+    </sql>
+</mapper>

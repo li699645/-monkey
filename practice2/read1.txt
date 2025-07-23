@@ -1,0 +1,9 @@
+遇到的问题1.Api接口定义
+        2.groupopenapi过程中路径问题以及忘加注解
+         3.请求出错，Url格式错误应为 jdbc:mysql://localhost:3306/nouse3?
+
+
+已完成，仍存在的问题
+1.存入数据库的值存在问题，推测是因为序列化问题
+
+解决问题:@requestbody 注解

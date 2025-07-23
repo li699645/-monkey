@@ -1,10 +1,16 @@
 package org.example.practice1.pojo;
 
-public class Test {
+import java.io.File;
+import java.io.IOException;
+
+public class Test{
     public static void main(String[] args) {
-        System.out.println("Hello World!");
-        User user = new User();
-        user.setId(5);
-        User user2 = new User();
+        String filePath="d:/new.txt";
+        File file=new File(filePath);
+        try {
+            file.createNewFile();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
