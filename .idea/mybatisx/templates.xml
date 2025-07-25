@@ -68,8 +68,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Type" />
-                  <option name="tableName" value="type" />
+                  <option name="className" value="RootType" />
+                  <option name="tableName" value="root_type" />
                 </TableUIInfo>
               </list>
             </option>

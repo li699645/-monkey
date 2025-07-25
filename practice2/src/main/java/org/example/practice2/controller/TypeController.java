@@ -1,5 +1,6 @@
 package org.example.practice2.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import jakarta.servlet.http.HttpServletRequest;
 import org.example.practice2.pojo.Type;
 import org.example.practice2.service.TypeService;
@@ -9,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
@@ -25,7 +25,15 @@ public class TypeController {
         Service.save(newtype);
     }
     @GetMapping("/get")
-    public List<Type> findAll(){
-        return Service.list();
+    public Page<Type> findAll(){
+        Page<Type> page = new Page<>(1, 10);
+        return Service.page(page);
     }
+    @DeleteMapping("/delete")
+        public String deleteType(@RequestParam Integer id){
+        Service.deleteID2(id);
+        System.out.println("要删除的ID是：" + id);
+        return "ok";
+        }
 }
+

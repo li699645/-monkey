@@ -7,11 +7,11 @@ import lombok.Data;
 
 /**
  * 
- * @TableName type
+ * @TableName root_type
  */
-@TableName(value ="type")
+@TableName(value ="root_type")
 @Data
-public class Type {
+public class RootType {
     /**
      * 
      */
@@ -22,16 +22,6 @@ public class Type {
      * 
      */
     private String name;
-
-    /**
-     * 
-     */
-    private String character1;
-
-    /**
-     * 
-     */
-    private String character2;
 
     /**
      * 

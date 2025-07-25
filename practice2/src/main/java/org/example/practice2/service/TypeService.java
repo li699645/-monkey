@@ -10,4 +10,5 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface TypeService extends IService<Type> {
 
+    void deleteID2(Integer id);
 }

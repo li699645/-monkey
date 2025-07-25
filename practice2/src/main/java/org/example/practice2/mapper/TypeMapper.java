@@ -2,6 +2,7 @@ package org.example.practice2.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.example.practice2.pojo.Type;
 
 /**
@@ -12,7 +13,7 @@ import org.example.practice2.pojo.Type;
 */
 @Mapper
 public interface TypeMapper extends BaseMapper<Type> {
-
+   void deleteId(@Param("id") Integer id);
 }
 
 
