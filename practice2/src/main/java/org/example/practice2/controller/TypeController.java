@@ -3,6 +3,7 @@ package org.example.practice2.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import jakarta.servlet.http.HttpServletRequest;
 import org.example.practice2.pojo.Type;
+import org.example.practice2.result.ResultMap;
 import org.example.practice2.service.TypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -11,6 +12,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.stream.Collectors;
+
+import static org.example.practice2.baseEnum.BaseEnum.a;
 
 @RestController
 @RequestMapping("type")
@@ -22,7 +25,7 @@ public class TypeController {
         String body = new BufferedReader(new InputStreamReader(request.getInputStream()))
                 .lines().collect(Collectors.joining());
         System.out.println(body);
-        Service.save(newtype);
+        Service.saveOrUpdate(newtype);
     }
     @GetMapping("/get")
     public Page<Type> findAll(){
@@ -30,10 +33,11 @@ public class TypeController {
         return Service.page(page);
     }
     @DeleteMapping("/delete")
-        public String deleteType(@RequestParam Integer id){
+        public ResultMap<Integer> deleteType(@RequestParam Integer id){
         Service.deleteID2(id);
         System.out.println("要删除的ID是：" + id);
-        return "ok";
+        String hello= String.valueOf(a.getCode());
+        return  ResultMap.success(id);
         }
 }
 

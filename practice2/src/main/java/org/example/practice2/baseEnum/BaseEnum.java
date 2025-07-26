@@ -5,14 +5,20 @@ public enum BaseEnum {
     b(2,"失败"),
     c(3,"有所收获" );
 
+    public Integer getCode;
     private int code;
     private String desc;
     BaseEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;
     }
-    public String getDesc(int code) {
-        return desc;
+
+    public int getCode() {
+        return code;
     }
 
+
+    public String getDesc() {
+        return desc;
+    }
 }
