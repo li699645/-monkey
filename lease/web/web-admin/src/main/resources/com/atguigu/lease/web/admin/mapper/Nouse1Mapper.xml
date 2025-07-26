@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.lease.web.admin.mapper.Nouse1Mapper">
+
+    <resultMap id="BaseResultMap" type="com.atguigu.lease.web.admin.com.atguigu.lease.model.entity.Nouse1">
+            <id property="noId" column="no_id" />
+            <result property="noName" column="no_name" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        no_id,no_name
+    </sql>
+</mapper>
