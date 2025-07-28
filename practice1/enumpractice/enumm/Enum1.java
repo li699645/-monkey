@@ -1,3 +1,5 @@
+package enumm;
+
 public enum Enum1 {
     a(1,"aa"),
     b(2,"cc"),
@@ -16,5 +18,6 @@ public enum Enum1 {
 
     public String getValue() {
         return value;
+
     }
 }

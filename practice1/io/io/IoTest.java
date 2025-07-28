@@ -1,9 +1,13 @@
 package io;
 
+import enumm.Enum1;
+
 import java.io.*;
 
 public class IoTest{
 public static void main(String[] args) throws IOException {
+
+    System.out.println(Enum1.a.getCode());
     File file =new File("d://","newfile3.txt");
     try {
         file.createNewFile();

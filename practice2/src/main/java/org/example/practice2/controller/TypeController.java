@@ -1,6 +1,7 @@
 package org.example.practice2.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import io.swagger.v3.oas.annotations.Parameter;
 import jakarta.servlet.http.HttpServletRequest;
 import org.example.practice2.pojo.Type;
 import org.example.practice2.result.ResultMap;
@@ -16,11 +17,11 @@ import java.util.stream.Collectors;
 import static org.example.practice2.baseEnum.BaseEnum.a;
 
 @RestController
-@RequestMapping("type")
+@RequestMapping("/type")
 public class TypeController {
     @Autowired TypeService Service;
     @PostMapping("/post")
-    public void type(HttpServletRequest request, @RequestBody Type newtype) throws IOException {
+    public void type(HttpServletRequest request,@Parameter(description = "类型请求") @RequestBody Type newtype) throws IOException {
 
         String body = new BufferedReader(new InputStreamReader(request.getInputStream()))
                 .lines().collect(Collectors.joining());
