@@ -13,7 +13,7 @@ public class ThreadTurns {
             }
         }).start();
         new Thread(()->{
-            while (integer.get()<=2000){
+            while (integer.get()<=200){
             if(!flag){
                 flag=true;
                 System.out.println(Thread.currentThread().getName()+"打印出"+integer.getAndIncrement());
