@@ -18,13 +18,7 @@ public class UrlAddress {
     @TableId(type = IdType.AUTO)
     private Integer id;
 
-    /**
-     * 
-     */
     private String name;
 
-    /**
-     * 
-     */
     private String url;
 }
